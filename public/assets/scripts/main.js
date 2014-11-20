@@ -7,7 +7,8 @@ jQuery(function($) {
     var userid;
 
      $('button').click(function(){
-          socket.emit('chat message', $('#m').val());
+     	var message = [$('#m').val(), userid];
+          socket.emit('chat message', message);
         $('#m').val('');
       });
       socket.on('chat message send', function(msg){
@@ -15,7 +16,7 @@ jQuery(function($) {
        	console.log(msg);
         // $('#messages').append($('<li>').text(msg));
         messages = $('#messages').html();
-        $('#messages').append('<li><span>' + userid + '</span><p>' + msg + '</p></li>');
+        $('#messages').append('<li><span>' + msg[1] + '</span><p>' + msg[0] + '</p></li>');
         console.log(userid);
       });
 

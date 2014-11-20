@@ -22,7 +22,7 @@ io.on('connection', function(socket){
   	io.emit('connected', id);
 
      socket.on('chat message', function(msg){
-        socket.emit('chat message send', msg,id);
+        socket.emit('chat message send', msg);
     });
 
     user.push({
