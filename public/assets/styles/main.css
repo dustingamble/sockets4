@@ -56,15 +56,21 @@ button {
   margin: 0;
   padding: 0; }
   #messages li {
-    padding: 5px 50px;
+    padding: 5px 30px;
     margin: 10px 0; }
     #messages li:nth-child(odd) {
       background: #eee;
       text-align: right;
       padding-right: 30px;
       color: #4d4d4d; }
+      #messages li:nth-child(odd) span {
+        float: right;
+        padding-left: 20px; }
     #messages li:nth-child(even) {
       background: #4d4d4d;
       text-align: left;
       padding-right: 30px;
       color: #eee; }
+      #messages li:nth-child(even) span {
+        float: left;
+        padding-right: 20px; }
