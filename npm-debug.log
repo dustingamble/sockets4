@@ -1,12 +1,12 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '--save-dev', 'gulp' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '--save', 'socket.io' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
-4 warn package.json socket-boilerplate@0.0.0 No repository field.
-5 warn package.json socket-boilerplate@0.0.0 No README data
+4 warn package.json socket-assignment@0.0.0 No repository field.
+5 warn package.json socket-assignment@0.0.0 homepage field must start with a protocol.
 6 verbose readDependencies using package.json deps
-7 verbose cache add [ 'gulp', null ]
-8 verbose cache add name=undefined spec="gulp" args=["gulp",null]
+7 verbose cache add [ 'socket.io@*', null ]
+8 verbose cache add name=undefined spec="socket.io@*" args=["socket.io@*",null]
 9 verbose parsed url { protocol: null,
 9 verbose parsed url   slashes: null,
 9 verbose parsed url   auth: null,
@@ -16,26 +16,41 @@
 9 verbose parsed url   hash: null,
 9 verbose parsed url   search: null,
 9 verbose parsed url   query: null,
-9 verbose parsed url   pathname: 'gulp',
-9 verbose parsed url   path: 'gulp',
-9 verbose parsed url   href: 'gulp' }
-10 silly lockFile 9750c68d-gulp gulp
-11 verbose lock gulp /Users/dustingamble/.npm/9750c68d-gulp.lock
-12 silly lockFile 9750c68d-gulp gulp
-13 error Error: Attempt to unlock gulp, which hasn't been locked
-13 error     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:44:11)
-13 error     at cb (/usr/local/lib/node_modules/npm/lib/cache/add-local.js:30:5)
-13 error     at /usr/local/lib/node_modules/npm/lib/cache/add-local.js:47:20
-13 error     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:30:7
-13 error     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
-13 error     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
-13 error     at Object.oncomplete (fs.js:107:15)
-14 error If you need help, you may report this *entire* log,
-14 error including the npm and node versions, at:
-14 error     <http://github.com/npm/npm/issues>
-15 error System Darwin 14.0.0
-16 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "gulp"
-17 error cwd /Users/dustingamble/Desktop/sockets4
-18 error node -v v0.10.32
-19 error npm -v 1.4.28
-20 verbose exit [ 1, true ]
+9 verbose parsed url   pathname: 'socket.io@*',
+9 verbose parsed url   path: 'socket.io@*',
+9 verbose parsed url   href: 'socket.io@*' }
+10 verbose cache add name="socket.io" spec="*" args=["socket.io","*"]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: '*',
+11 verbose parsed url   path: '*',
+11 verbose parsed url   href: '*' }
+12 verbose addNamed [ 'socket.io', '*' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 141fbf03-socket-io socket.io@*
+15 verbose lock socket.io@* /Users/dustingamble/.npm/141fbf03-socket-io.lock
+16 silly lockFile 141fbf03-socket-io socket.io@*
+17 error Error: Attempt to unlock socket.io@*, which hasn't been locked
+17 error     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:44:11)
+17 error     at cb (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:32:5)
+17 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:41:20
+17 error     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:30:7
+17 error     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+17 error     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+17 error     at Object.oncomplete (fs.js:107:15)
+18 error If you need help, you may report this *entire* log,
+18 error including the npm and node versions, at:
+18 error     <http://github.com/npm/npm/issues>
+19 error System Darwin 14.0.0
+20 error command "node" "/usr/local/bin/npm" "install" "--save" "socket.io"
+21 error cwd /Users/dustingamble/Desktop/sockets4
+22 error node -v v0.10.32
+23 error npm -v 1.4.28
+24 verbose exit [ 1, true ]
