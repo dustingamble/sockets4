@@ -4,8 +4,8 @@ jQuery(function($) {
     
     // Create New Socket Connection using Socket.io
     var socket = io();
-   
-      $('button').click(function(){
+
+     $('button').click(function(){
           socket.emit('chat message', $('#m').val());
         $('#m').val('');
       });
@@ -14,5 +14,5 @@ jQuery(function($) {
         $('#messages').append($('<li>').text(msg));
       });
 
-
+    
 });

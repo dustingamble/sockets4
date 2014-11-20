@@ -4,6 +4,8 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var id = 0;
+var user = [];
 
 // Route our Assets
 app.use('/assets/', express.static(__dirname + '/public/assets/'));
@@ -15,12 +17,18 @@ app.get('/', function(req, res){
 
 // Handle Socket Connection
 io.on('connection', function(socket){
-  console.log('A User Connected');
+  console.log('A User Connected' + id);
 
 
-      socket.on('chat message', function(msg){
-          socket.emit('chat message send', msg);
-      });
+     socket.on('chat message', function(msg){
+        socket.emit('chat message send', msg);
+    });
+
+     user.push({
+     	id:id,name:null
+     });
+
+     id = id + 1;
 
 });
 
