@@ -6,6 +6,7 @@
     <title>sockets assignment</title>
     <meta name="description" content="Hello World">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700" type="text/css">
     <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
     <script src="/socket.io/socket.io.js">   </script>
     <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
@@ -15,10 +16,11 @@
   <div class="wrapper">
     <h1> <span class="smaller">samosa </span>Chat</h1>
     <h2>Get Chattin'</h2>
-    <ul id="messages">
+    <div id="send">
       <input autocomplete="off" id="m">
       <button>Send</button>
-    </ul>
+    </div>
+    <ul id="messages"></ul>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
     <script type="text/javascript" src="assets/scripts/main.js"></script>

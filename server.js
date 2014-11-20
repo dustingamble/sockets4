@@ -4,6 +4,9 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+
+// Variables
+var serverMessages = '';
 var id = 0;
 var user = [];
 
@@ -17,12 +20,19 @@ app.get('/', function(req, res){
 
 // Handle Socket Connection
 io.on('connection', function(socket){
-  console.log('A User Connected' + id);
+ 	
+ 	console.log('A User Connected' + id);
 
+ 	// Emit a new user connected
   	io.emit('connected', id);
 
-     socket.on('chat message', function(msg){
-        socket.emit('chat message send', msg);
+  	// Send the state of the messages the first time
+    socket.emit('chat message send', serverMessages);
+
+    // Update and resend the state of the messages when a user adds a new one
+    socket.on('chat message', function(data) {
+     	serverMessages += '<li><span>' + data[2] + '</span><p>' + data[0] + '</p></li>';
+        socket.emit('chat message send', serverMessages);
     });
 
     user.push({

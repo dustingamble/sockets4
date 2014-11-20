@@ -7,7 +7,7 @@ var fs        = require('fs');
 var gulp      = require('gulp');
 var sass      = require('gulp-sass');
 var jade      = require('gulp-jade');
-var imagemin  = require('gulp-sass');
+var imagemin  = require('gulp-imagemin');
 var rename    = require('gulp-rename');
 
 // ------------------------------------
@@ -47,6 +47,7 @@ gulp.task('watch', function() {
 gulp.task('styles', function() {
 
   gulp.src('./src/assets/styles/index.sass')
+    // .pipe(sass({ errLogToConsole: false, sourceComments: 'normal' }))
     .pipe(sass())
     .pipe(rename('main.css'))
     .pipe(gulp.dest('./public/assets/styles/'))
