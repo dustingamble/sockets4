@@ -19,16 +19,18 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
   console.log('A User Connected' + id);
 
+  	io.emit('connected', id);
 
      socket.on('chat message', function(msg){
-        socket.emit('chat message send', msg);
+        socket.emit('chat message send', msg,id);
     });
 
-     user.push({
-     	id:id,name:null
-     });
+    user.push({
+    	id:id,name:null
+    });
 
-     id = id + 1;
+    id = id + 1;
+
 
 });
 
