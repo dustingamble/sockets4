@@ -7,17 +7,18 @@
     <meta name="description" content="Hello World">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
     <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js">   </script>
+    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.js"></script>
   </head>
   <body></body>
   <div class="wrapper">
-    <h1>Hello World!</h1>
-    <p>Whats up?</p>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off">
+    <h1>Chat</h1>
+    <p>Get Chattin'</p>
+    <ul id="messages">
+      <input autocomplete="on" id="m">
       <button>Send</button>
-    </form>
+    </ul>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
     <script type="text/javascript" src="assets/scripts/main.js"></script>

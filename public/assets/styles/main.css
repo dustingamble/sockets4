@@ -1,46 +1,61 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Slab', serif;
-  font-weight: normal; }
-
-.button {
-  font-family: 'Roboto Slab', serif;
-  font-weight: normal; }
-
-body {
-  font-family: 'Roboto Slab', serif;
-  background: #f9f9f9; }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
-  font: 13px Helvetica, Arial; }
+  font-family: 'Roboto Slab', serif;
+  background-image: url(../../images/upfeathers.png);
+  background-repeat: repeat-x;
+  background: #f7f7f7;
+  padding: 50px; }
 
-form {
-  background: #000;
-  padding: 3px;
-  position: fixed;
-  bottom: 0;
-  width: 100%; }
-  form input {
-    border: 0;
-    padding: 10px;
-    width: 90%;
-    margin-right: 0.5%; }
-  form button {
-    width: 9%;
-    background: #82e0ff;
-    border: none;
-    padding: 10px; }
+.wrapper {
+  background: #f7de9c;
+  height: 600px;
+  padding: 50px; }
+
+h1 {
+  text-transform: uppercase;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 50px;
+  color: #bc2e1e;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd; }
+
+p {
+  text-align: center;
+  padding: 10px 0 30px;
+  letter-spacing: 25px;
+  text-transform: uppercase;
+  color: #07070d;
+  font-weight: 700;
+  font-size: 20px; }
+
+input {
+  border: 0;
+  padding: 10px;
+  width: 90%;
+  margin-right: 0.5%; }
+
+button {
+  width: 9%;
+  background: rgba(33, 195, 112, 0.9);
+  border: none;
+  padding: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
 
 #messages {
   list-style-type: none;
   margin: 0;
   padding: 0; }
   #messages li {
-    padding: 5px 10px; }
+    padding: 5px 10px;
+    margin: 50px; }
     #messages li:nth-child(odd) {
       background: #eee; }

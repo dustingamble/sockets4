@@ -16,6 +16,12 @@ app.get('/', function(req, res){
 // Handle Socket Connection
 io.on('connection', function(socket){
   console.log('A User Connected');
+
+
+      socket.on('chat message', function(msg){
+          socket.emit('chat message send', msg);
+      });
+
 });
 
 // Start Server

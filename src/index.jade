@@ -28,25 +28,11 @@ html
 
     h1 Chat
 
-    p Whats up?
+    p Get Chattin'
 
-    ul#messages
-    form(action='')
-      input#m(autocomplete='off')
+    ul(id='messages')
+      input(autocomplete='on' id='m')
       button Send
-
-<script>
-  var socket = io();
-  $('form').submit(function(){
-    socket.emit('chat message', $('#m').val());
-    $('#m').val('');
-    return false;
-  });
-  socket.on('chat message', function(msg){
-    $('#messages').append($('<li>').text(msg));
-  });
-</script>
-
 
     script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.1.min.js")
     
